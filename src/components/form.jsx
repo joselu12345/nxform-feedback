@@ -1,7 +1,7 @@
 'use client'
 import { realAction1, realAction2, realAction3 } from "@/lib/actions";
 import { useActionState, useEffect } from "react";
-import { CircleCheck, CircleAlert, RefreshCcw } from 'lucide-react'
+import { CircleCheck, CircleAlert, RefreshCw } from 'lucide-react'
 import { toast } from "sonner";
 
 
@@ -47,7 +47,7 @@ function Formulario() {
                 // formAction={action1}
                 disabled={pending1}
                 className="disabled:bg-slate-600 bg-blue-600 text-white rounded-lg py-2" >
-                {pending1 ? <RefreshCcw className="inline animate-spin size-4" /> : 'Action 1'}
+                {pending1 ? <RefreshCw className="inline animate-spin size-4" /> : 'Action 1'}
             </button>
 
 
@@ -66,7 +66,7 @@ function Formulario() {
                 formAction={action2}
                 disabled={pending2}
                 className="disabled:bg-slate-600 bg-blue-600 text-white rounded-lg py-2" >
-                {pending2 ? <RefreshCcw className="inline animate-spin size-4" /> : 'Action 2'}
+                {pending2 ? <RefreshCw className="inline animate-spin size-4" /> : 'Action 2'}
             </button>
             {state2?.error && !pending2 &&
                 <div className="text-sm font-medium text-red-600 bg-red-50 rounded-md flex items-center border">
@@ -83,7 +83,7 @@ function Formulario() {
                 formAction={action3}
                 disabled={pending3}
                 className="disabled:bg-slate-600 bg-blue-600 text-white rounded-lg py-2" >
-                {pending3 ? <RefreshCcw className="inline animate-spin size-4" /> : 'Action 3'}
+                {pending3 ? <RefreshCw className="inline animate-spin size-4" /> : 'Action 3'}
             </button>
             {state3?.error && !pending3 &&
                 <div className="text-sm font-medium text-red-600 bg-red-50 rounded-md flex items-center border">
