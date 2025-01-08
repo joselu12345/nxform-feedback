@@ -1,7 +1,7 @@
 'use client'
 import { realAction1, realAction2, realAction3 } from "@/lib/actions";
 import { useActionState, useEffect } from "react";
-import { CircleCheck, CircleAlert, RefreshCw } from 'lucide-react'
+import { CircleCheck, CircleAlert, RefreshCw, ShieldX, ShieldPlus } from 'lucide-react'
 import { toast } from "sonner";
 
 
@@ -53,12 +53,12 @@ function Formulario() {
 
             {state1?.error && !pending1 &&
                 < div className="text-sm font-medium text-red-600 bg-red-50 rounded-md flex items-center border">
-                    {<CircleAlert className="inline m-4 mr-2 size-4" />} {state1.error}
+                    {<ShieldX className="inline m-4 mr-2 size-4" />} {state1.error}
                 </div>
             }
             {state1?.success && !pending1 &&
                 <div className="text-sm font-medium text-green-600 bg-green-50 rounded-md flex items-center border">
-                    {<CircleCheck className="inline m-4 mr-2 size-4" />} {state1.success}
+                    {<CShieldPlus className="inline m-4 mr-2 size-4" />} {state1.success}
                 </div>
             }
 
@@ -70,12 +70,12 @@ function Formulario() {
             </button>
             {state2?.error && !pending2 &&
                 <div className="text-sm font-medium text-red-600 bg-red-50 rounded-md flex items-center border">
-                    {<CircleAlert className="inline m-4 mr-2 size-4" />} {state2.error}
+                    {<ShieldX className="inline m-4 mr-2 size-4" />} {state2.error}
                 </div>
             }
             {state2?.success && !pending2 &&
                 <div className="text-sm font-medium text-green-600 bg-green-50 rounded-md flex items-center border">
-                    {<CircleCheck className="inline m-4 mr-2 size-4" />} {state2.success}
+                    {<ShieldPlus className="inline m-4 mr-2 size-4" />} {state2.success}
                 </div>
             }
 
@@ -87,12 +87,12 @@ function Formulario() {
             </button>
             {state3?.error && !pending3 &&
                 <div className="text-sm font-medium text-red-600 bg-red-50 rounded-md flex items-center border">
-                    {<CircleAlert className="inline m-4 mr-2 size-4" />} {state3.error}
+                    {<ShieldX className="inline m-4 mr-2 size-4" />} {state3.error}
                 </div>
             }
             {state3?.success && !pending3 &&
                 <div className="text-sm font-medium text-green-600 bg-green-50 rounded-md flex items-center border">
-                    {<CircleCheck className="inline m-4 mr-2 size-4" />} {state3.success}
+                    {<ShieldPlus className="inline m-4 mr-2 size-4" />} {state3.success}
                 </div>
             }
 
